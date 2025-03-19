@@ -21,15 +21,16 @@ import silverSeven from "./img/silverSeven.png";
 const product = {
   black: {
     main: blackOne,
-    thumbnails: [blackTwo],
+    thumbnails: [blackOne, blackTwo],
   },
   pink: {
     main: pinkOne,
-    thumbnails: [pinkTwo, pinkThree, pinkFour, pinkFive],
+    thumbnails: [pinkOne, pinkTwo, pinkThree, pinkFour, pinkFive],
   },
   silver: {
     main: silverOne,
     thumbnails: [
+      silverOne,
       silverTwo,
       silverThree,
       silverFour,
@@ -41,10 +42,9 @@ const product = {
 };
 
 const MainPage = () => {
-  // 기본 메인 이미지를 첫 번째 색상의 "one" 이미지로 설정
-  const [mainImage, setMainImage] = useState(product.black.main); // blackOne이 기본
-  const [thumbnails, setThumbnails] = useState(product.black.thumbnails); // black의 썸네일들
-  const [hoveredImage, setHoveredImage] = useState(null); // 임시로 바뀔 이미지 (오른쪽 색상 리스트 호버 시)
+  const [mainImage, setMainImage] = useState(product.black.main); // 기본 메인 이미지
+  const [thumbnails, setThumbnails] = useState(product.black.thumbnails); // black 썸네일들
+  const [hoveredImage, setHoveredImage] = useState(null); // 임시로 바뀔 이미지
 
   // 썸네일 호버 시 메인 이미지 변경
   const handleThumbnailHover = (image) => {
@@ -54,12 +54,14 @@ const MainPage = () => {
   // 썸네일 클릭 시 메인 이미지 고정
   const handleThumbnailClick = (image) => {
     setMainImage(image);
+    setHoveredImage(null); // 클릭하면 호버된 이미지 리셋
   };
 
   // 색상 선택 시 메인 이미지와 썸네일 리스트 변경
   const handleColorChange = (color) => {
-    setMainImage(product[color].main); // 색상에 맞는 "one" 이미지로 변경
+    setMainImage(product[color].main);
     setThumbnails(product[color].thumbnails);
+    setHoveredImage(null); // 색상 변경 시 호버된 이미지 초기화
   };
 
   return (

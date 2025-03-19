@@ -1,14 +1,15 @@
 import "./right.css";
 import RightTitle from "./RightTitle";
 import RightPrice from "./RightPrice";
-import subElement from "./SubElement";
+import RightSubImg from "./RightSubImg";
 
-const Right = () => {
+const Right = (props) => {
+  const { handleColorChange } = props;
   return (
     <div className="rightbox">
       <RightTitle />
       <RightPrice />
-      <subElement />
+      <RightSubImg handleColorChange={handleColorChange} />
     </div>
   );
 };

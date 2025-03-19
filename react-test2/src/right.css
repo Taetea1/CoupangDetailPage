@@ -209,3 +209,23 @@ Button {
   display: flex;
   align-items: center;
 }
+
+.color-options {
+  display: flex;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.thumbnail-container {
+  display: flex;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.color-option {
+  cursor: pointer;
+}
