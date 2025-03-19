@@ -43,12 +43,14 @@ const product = {
 
 const MainPage = () => {
   const [mainImage, setMainImage] = useState(product.black.main); // 기본 메인 이미지
-  const [thumbnails, setThumbnails] = useState(product.black.thumbnails); // black 썸네일들
+  const [thumbnails, setThumbnails] = useState(product.black.thumbnails); // 블랙 썸네일
   const [hoveredImage, setHoveredImage] = useState(null); // 임시로 바뀔 이미지
+  const [prevImage, setPrevImage] = useState(product.black.main);
 
   // 썸네일 호버 시 메인 이미지 변경
   const handleThumbnailHover = (image) => {
     setHoveredImage(image);
+    setPrevImage(image);
   };
 
   // 썸네일 클릭 시 메인 이미지 고정
@@ -62,6 +64,7 @@ const MainPage = () => {
     setMainImage(product[color].main);
     setThumbnails(product[color].thumbnails);
     setHoveredImage(null); // 색상 변경 시 호버된 이미지 초기화
+    setPrevImage(null);
   };
 
   return (
@@ -73,8 +76,9 @@ const MainPage = () => {
       />
       <Right
         handleColorChange={handleColorChange}
-        onThumbnailHover={handleThumbnailHover}
         onThumbnailClick={handleThumbnailClick}
+        prevImage={prevImage}
+        setHoveredImage={setHoveredImage}
       />
     </div>
   );
