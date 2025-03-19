@@ -70,7 +70,6 @@ const MainPage = () => {
         mainImage={hoveredImage || mainImage} // 호버된 이미지가 있으면 그걸로, 없으면 기본 메인 이미지
         thumbnails={thumbnails}
         onThumbnailHover={handleThumbnailHover}
-        onThumbnailClick={handleThumbnailClick}
       />
       <Right
         handleColorChange={handleColorChange}
