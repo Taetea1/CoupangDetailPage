@@ -17,17 +17,17 @@ import silverSeven from "./img/silverSeven.png";
 export const product = {
   black: {
     main: blackOne,
-    thumbnails: [blackOne, blackTwo],
+    lists: [blackOne, blackTwo],
     number: "6710871611 - 14799784162",
   },
   pink: {
     main: pinkOne,
-    thumbnails: [pinkOne, pinkTwo, pinkThree, pinkFour, pinkFive],
+    lists: [pinkOne, pinkTwo, pinkThree, pinkFour, pinkFive],
     number: "6710871611 - 15579560349",
   },
   silver: {
     main: silverOne,
-    thumbnails: [
+    lists: [
       silverOne,
       silverTwo,
       silverThree,

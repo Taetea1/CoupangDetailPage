@@ -5,21 +5,22 @@ import Right from "./Right";
 import { product } from "./product"; // 이미지 데이터
 
 const MainPage = () => {
-  const [mainImage, setMainImage] = useState(product.black.main);
-  const [thumbnails, setThumbnails] = useState(product.black.thumbnails);
-  const [hoveredImage, setHoveredImage] = useState(null);
-  const [prevImage, setPrevImage] = useState(product.black.main);
+  const [mainImage, setMainImage] = useState(product.black.main); // 메인 이미지
+  const [lists, setLists] = useState(product.black.lists); // 각 리스트 이미지들
+  const [hoveredImage, setHoveredImage] = useState(null); //호버된 이미지
+  const [prevImage, setPrevImage] = useState(product.black.main); //호버 되기 전 왼쪽 부분 이미지
   const [productNumber, setProductNumber] = useState(
     "6710871611 - 14799784162"
-  );
-  const handleThumbnailHover = (image) => {
+  ); //상품 번호
+
+  const hoverList = (image) => {
     setHoveredImage(image);
     setPrevImage(image);
   };
 
-  const handleColorChange = (color) => {
+  const changeColor = (color) => {
     setMainImage(product[color].main);
-    setThumbnails(product[color].thumbnails);
+    setLists(product[color].lists);
     setHoveredImage(null);
     setPrevImage(null);
     setProductNumber(product[color].number);
@@ -29,11 +30,11 @@ const MainPage = () => {
     <div className="flexbox">
       <Left
         mainImage={hoveredImage || mainImage}
-        thumbnails={thumbnails}
-        onThumbnailHover={handleThumbnailHover}
+        lists={lists}
+        hoverList={hoverList}
       />
       <Right
-        handleColorChange={handleColorChange}
+        changeColor={changeColor}
         prevImage={prevImage}
         setHoveredImage={setHoveredImage}
         productNumber={productNumber}

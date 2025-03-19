@@ -2,14 +2,14 @@ import "./right.css";
 import { colors } from "./product"; // 색상별 이미지 데이터 임포트
 
 const RightSubImg = (props) => {
-  const { handleColorChange, onThumbnailHover, prevImage } = props;
+  const { changeColor, hoverRightList, prevImage } = props;
 
-  const handleColorHover = (color) => {
-    onThumbnailHover(colors[color]);
+  const hoverColor = (color) => {
+    hoverRightList(colors[color]);
   };
 
   const handleColorLeave = () => {
-    onThumbnailHover(prevImage);
+    hoverRightList(prevImage);
   };
 
   return (
@@ -20,9 +20,9 @@ const RightSubImg = (props) => {
           src={colors[color]}
           alt={color}
           className="color-option"
-          onMouseEnter={() => handleColorHover(color)}
+          onMouseEnter={() => hoverColor(color)}
           onMouseLeave={handleColorLeave}
-          onClick={() => handleColorChange(color)}
+          onClick={() => changeColor(color)}
         />
       ))}
     </div>

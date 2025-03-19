@@ -3,13 +3,11 @@ import RightTitle from "./RightTitle";
 import RightPrice from "./RightPrice";
 import RightSubImg from "./RightSubImg";
 import RightInfo from "./RightInfo";
-import { useState } from "react";
 
 const Right = (props) => {
-  const { handleColorChange, prevImage, setHoveredImage, productNumber } =
-    props;
+  const { changeColor, prevImage, setHoveredImage, productNumber } = props;
 
-  const handleRightThumbnailHover = (image) => {
+  const hoverRightList = (image) => {
     setHoveredImage(image);
   };
 
@@ -18,8 +16,8 @@ const Right = (props) => {
       <RightTitle />
       <RightPrice />
       <RightSubImg
-        handleColorChange={handleColorChange}
-        onThumbnailHover={handleRightThumbnailHover}
+        changeColor={changeColor}
+        hoverRightList={hoverRightList}
         prevImage={prevImage}
       />
       <RightInfo productNumber={productNumber} />

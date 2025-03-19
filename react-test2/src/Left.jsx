@@ -3,11 +3,11 @@ import LeftSubImg from "./LeftSubImg";
 import LeftMainImg from "./LeftMainImg";
 
 const Left = (props) => {
-  const { mainImage, thumbnails, onThumbnailHover } = props;
+  const { mainImage, lists, hoverList } = props;
   return (
     <div className="imgwrap">
       <LeftMainImg mainImage={mainImage} />
-      <LeftSubImg thumbnails={thumbnails} onThumbnailHover={onThumbnailHover} />
+      <LeftSubImg lists={lists} hoverList={hoverList} />
     </div>
   );
 };
