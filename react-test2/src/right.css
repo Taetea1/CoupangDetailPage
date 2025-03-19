@@ -1,0 +1,211 @@
+.rightbox {
+  /* width: 50%; */
+  margin-left: 30px;
+}
+
+.ratebox {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #346aff;
+  padding-bottom: 6px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ratewrap {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.pricebox {
+  color: #cb1400;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  font-size: 20px;
+  padding-bottom: 16px;
+  line-height: 20px;
+  span {
+    font-size: 14px !important;
+    margin-left: 3px;
+    font-weight: 400 !important;
+  }
+}
+
+.originbox {
+  display: flex;
+  padding-top: 16px;
+  font-size: 14px;
+}
+
+.orginprice {
+  text-decoration: line-through;
+  color: #768695;
+  margin-left: 3px;
+}
+
+.coupangbox {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  span {
+    font-size: 14px !important;
+    margin-left: 3px;
+    font-weight: 400 !important;
+  }
+}
+
+.evalution {
+  color: rgb(84, 84, 216);
+  margin-left: 8px;
+}
+
+.infobox {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 10px 0;
+  span {
+    margin-left: 5px;
+    color: #008c00;
+  }
+  img {
+    margin-left: 2px;
+  }
+}
+
+Button {
+  margin: 0 2px;
+}
+
+.ant-select-selector {
+  text-align: center;
+}
+
+.adjustbox {
+  display: flex;
+}
+.countbox {
+  display: flex;
+  align-items: center;
+  border-radius: 5%;
+  width: fit-content;
+  padding: 3px 8px;
+  margin-right: 3px;
+  border: 1px solid black;
+}
+
+.amount {
+  margin: 0 10px;
+}
+
+.minus,
+.plus {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.delivery-wrap {
+  display: flex;
+  height: 18px;
+  margin: 20px 0 18px 0;
+}
+
+.stick {
+  width: 1px;
+  height: 18px;
+  background: #eee;
+  margin: 0 12px;
+}
+
+.iconbox {
+  width: 18px;
+  margin-right: 6px;
+}
+
+.icon {
+  width: 15px;
+}
+
+.green-text {
+  color: #008c00;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.small-text {
+  color: #212b36;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: auto;
+}
+
+.free-text {
+  color: #212b36;
+  font-size: 14px;
+  font-weight: 400;
+}
+.nowbuy {
+  background: #346aff;
+  color: #fff;
+  border-radius: 0;
+  width: 191px;
+  height: 42px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #346aff;
+}
+
+/* .nowbuy:hover {
+  background-color: #2850bd;
+} */
+
+.cartbtn {
+  line-height: 40px;
+  width: 191px;
+  height: 42px;
+  border-radius: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #346aff;
+}
+
+.simplepay-wrap {
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simplepay {
+  margin-right: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #212b36;
+}
+
+.payicon {
+  width: 15px;
+  height: auto;
+  margin: 0 2px 0 4px;
+}
+
+.paytext {
+  font-weight: 400;
+  font-size: 13px;
+  color: #454f5b;
+}
+
+.payiconbox {
+  display: flex;
+  align-items: center;
+}

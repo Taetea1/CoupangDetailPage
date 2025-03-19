@@ -1,0 +1,9 @@
+.applebox {
+  display: flex;
+  height: 300px;
+}
+
+.eachimage {
+  cursor: pointer;
+  margin: 5px 5px 0 0;
+}
