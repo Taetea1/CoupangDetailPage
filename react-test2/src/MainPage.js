@@ -72,7 +72,11 @@ const MainPage = () => {
         onThumbnailHover={handleThumbnailHover}
         onThumbnailClick={handleThumbnailClick}
       />
-      <Right handleColorChange={handleColorChange} />
+      <Right
+        handleColorChange={handleColorChange}
+        onThumbnailHover={handleThumbnailHover}
+        onThumbnailClick={handleThumbnailClick}
+      />
     </div>
   );
 };

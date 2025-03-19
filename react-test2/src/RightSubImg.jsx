@@ -10,7 +10,7 @@ const colors = {
 };
 
 const RightSubImg = (props) => {
-  const { handleColorChange } = props;
+  const { handleColorChange, onThumbnailHover } = props;
   return (
     <div className="color-options">
       {Object.keys(colors).map((color) => (
@@ -19,6 +19,8 @@ const RightSubImg = (props) => {
           src={colors[color]}
           alt={color}
           className="color-option"
+          onMouseEnter={() => onThumbnailHover(colors[color])} // 호버 시 메인 이미지 변경
+          onMouseLeave={() => onThumbnailHover(null)} // 마우스 떼면 원래 이미지로 복귀
           onClick={() => handleColorChange(color)} // 색상 선택 시 메인 이미지와 썸네일 변경
         />
       ))}

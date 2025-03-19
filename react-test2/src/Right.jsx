@@ -4,12 +4,16 @@ import RightPrice from "./RightPrice";
 import RightSubImg from "./RightSubImg";
 
 const Right = (props) => {
-  const { handleColorChange } = props;
+  const { handleColorChange, onThumbnailHover, onThumbnailClick } = props;
   return (
     <div className="rightbox">
       <RightTitle />
       <RightPrice />
-      <RightSubImg handleColorChange={handleColorChange} />
+      <RightSubImg
+        handleColorChange={handleColorChange}
+        onThumbnailHover={onThumbnailHover}
+        onThumbnailClick={onThumbnailClick}
+      />
     </div>
   );
 };
