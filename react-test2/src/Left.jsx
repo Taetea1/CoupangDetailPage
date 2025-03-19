@@ -4,7 +4,6 @@ import LeftMainImg from "./LeftMainImg";
 
 const Left = (props) => {
   const { mainImage, thumbnails, onThumbnailHover } = props;
-
   return (
     <div className="imgwrap">
       <LeftMainImg mainImage={mainImage} />

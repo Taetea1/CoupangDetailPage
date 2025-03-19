@@ -8,7 +8,7 @@ const LeftSubImg = (props) => {
           src={img}
           alt={`Thumbnail ${index}`}
           className="thumbnail"
-          onMouseEnter={() => onThumbnailHover(img)} // 호버 시 메인 이미지 변경
+          onMouseEnter={() => onThumbnailHover(img)}
         />
       ))}
     </div>

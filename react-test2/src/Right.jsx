@@ -2,13 +2,17 @@ import "./right.css";
 import RightTitle from "./RightTitle";
 import RightPrice from "./RightPrice";
 import RightSubImg from "./RightSubImg";
+import RightInfo from "./RightInfo";
+import { useState } from "react";
 
 const Right = (props) => {
-  const { handleColorChange, onThumbnailClick, prevImage, setHoveredImage } =
+  const { handleColorChange, prevImage, setHoveredImage, productNumber } =
     props;
+
   const handleRightThumbnailHover = (image) => {
     setHoveredImage(image);
   };
+
   return (
     <div className="rightbox">
       <RightTitle />
@@ -16,9 +20,9 @@ const Right = (props) => {
       <RightSubImg
         handleColorChange={handleColorChange}
         onThumbnailHover={handleRightThumbnailHover}
-        onThumbnailClick={onThumbnailClick}
         prevImage={prevImage}
       />
+      <RightInfo productNumber={productNumber} />
     </div>
   );
 };

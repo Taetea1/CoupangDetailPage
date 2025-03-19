@@ -1,16 +1,17 @@
 import "./right.css";
-import blackOne from "./img/blackOne.jpg";
-import pinkOne from "./img/pinkOne.jpg";
-import silverOne from "./img/silverOne.png";
-
-const colors = {
-  black: blackOne,
-  pink: pinkOne,
-  silver: silverOne,
-};
+import { colors } from "./product"; // 색상별 이미지 데이터 임포트
 
 const RightSubImg = (props) => {
   const { handleColorChange, onThumbnailHover, prevImage } = props;
+
+  const handleColorHover = (color) => {
+    onThumbnailHover(colors[color]);
+  };
+
+  const handleColorLeave = () => {
+    onThumbnailHover(prevImage);
+  };
+
   return (
     <div className="color-options">
       {Object.keys(colors).map((color) => (
@@ -19,9 +20,9 @@ const RightSubImg = (props) => {
           src={colors[color]}
           alt={color}
           className="color-option"
-          onMouseEnter={() => onThumbnailHover(colors[color])} // 호버 시 메인 이미지 변경
-          onMouseLeave={() => onThumbnailHover(prevImage)} // 마우스 떼면 원래 이미지로 복귀
-          onClick={() => handleColorChange(color)} // 색상 선택 시 메인 이미지와 썸네일 변경
+          onMouseEnter={() => handleColorHover(color)}
+          onMouseLeave={handleColorLeave}
+          onClick={() => handleColorChange(color)}
         />
       ))}
     </div>
