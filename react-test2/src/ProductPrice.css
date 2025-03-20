@@ -176,11 +176,6 @@
   align-items: center;
 }
 
-/* 별크기 조절 */
-.ant-rate-star {
-  font-size: 20px !important;
-}
-
 @media (max-width: 1139px) {
   .green-text {
     font-size: 12px;

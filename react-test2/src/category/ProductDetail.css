@@ -1,0 +1,35 @@
+.detail-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageInfo {
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded {
+  max-height: fit-content;
+}
+
+.fold {
+  max-height: 1500px;
+}
+
+.fold-btn {
+  display: inline-block;
+  padding: 14px 80px;
+  background: inherit;
+  color: #346aff;
+  border-radius: 2px;
+  outline: none;
+  font-weight: 700;
+  border: 1px solid #346aff;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 30px;
+}

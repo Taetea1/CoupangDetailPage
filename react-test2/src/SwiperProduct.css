@@ -1,0 +1,35 @@
+.today-box {
+  margin: 50px 0;
+}
+
+.swiper-wrap {
+  position: relative;
+  width: 100%;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.product-title {
+  font-size: 23px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  span {
+    color: #e12705;
+  }
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}

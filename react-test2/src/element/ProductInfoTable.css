@@ -1,0 +1,11 @@
+.detail-title {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-info-mark {
+  width: 100%;
+  display: flex;
+}

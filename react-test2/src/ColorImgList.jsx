@@ -1,4 +1,4 @@
-import { colors } from "./product"; // 색상별 이미지 데이터
+import { colors } from "./data/product"; // 색상별 이미지 데이터
 import "./ColorImgList.css";
 
 const ColorImgList = (props) => {
