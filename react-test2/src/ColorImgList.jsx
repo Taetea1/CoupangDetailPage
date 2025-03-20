@@ -1,7 +1,7 @@
-import "./right.css";
-import { colors } from "./product"; // 색상별 이미지 데이터 임포트
+import { colors } from "./product"; // 색상별 이미지 데이터
+import "./ColorImgList.css";
 
-const RightSubImg = (props) => {
+const ColorImgList = (props) => {
   const { changeColor, hoverRightList, prevImage } = props;
 
   const hoverColor = (color) => {
@@ -29,4 +29,4 @@ const RightSubImg = (props) => {
   );
 };
 
-export default RightSubImg;
+export default ColorImgList;

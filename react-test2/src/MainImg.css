@@ -1,0 +1,10 @@
+.main-img {
+  width: 500px;
+  margin: 0 10px;
+}
+
+@media (max-width: 1139px) {
+  .main-img {
+    padding-left: 80px;
+  }
+}

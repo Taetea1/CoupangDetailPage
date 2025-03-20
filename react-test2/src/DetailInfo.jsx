@@ -1,4 +1,6 @@
-const RightInfo = (props) => {
+import "./DetailInfo.css";
+
+const DetailInfo = (props) => {
   const { productNumber } = props;
   return (
     <div>
@@ -21,4 +23,4 @@ const RightInfo = (props) => {
   );
 };
 
-export default RightInfo;
+export default DetailInfo;

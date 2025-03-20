@@ -1,0 +1,32 @@
+.rightbox {
+  margin-left: 30px;
+}
+
+.orginprice {
+  text-decoration: line-through;
+  color: #768695;
+  margin-left: 3px;
+}
+
+Button {
+  margin: 0 2px;
+}
+
+.ant-select-selector {
+  text-align: center;
+}
+
+.thumbnail-container {
+  display: flex;
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 1139px) {
+  .rightbox {
+    margin-left: 0;
+    padding-left: 120px;
+  }
+}

@@ -8,7 +8,7 @@
 
 @media (max-width: 1139px) {
   .flexbox {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 }

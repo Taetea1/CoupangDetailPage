@@ -1,0 +1,55 @@
+.ratewrap {
+  padding: 0 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #346aff;
+  padding-bottom: 6px;
+}
+
+.titlebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ratebox {
+  display: flex;
+  margin-top: 10px;
+}
+
+.evalution {
+  color: rgb(84, 84, 216);
+  margin-left: 8px;
+}
+
+.sharebtn {
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background: url(//img1a.coupangcdn.com/image/dragonstone/sdp/PCSDP_imageasset_180417-min.png)
+    no-repeat -306px -209px;
+  border: none;
+}
+
+.heartbtn {
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background: url(//img1a.coupangcdn.com/image/dragonstone/sdp/PCSDP_imageasset_180417-min.png)
+    no-repeat -218px -209px;
+  border: none;
+}
+
+@media (max-width: 1139px) {
+  .title {
+    font-size: 15.5px;
+  }
+}

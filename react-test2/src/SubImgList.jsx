@@ -1,4 +1,6 @@
-const LeftSubImg = (props) => {
+import "./SubImgList.css";
+
+const SubImgList = (props) => {
   const { lists, hoverList } = props;
   return (
     <div className="thumbnail-container">
@@ -15,4 +17,4 @@ const LeftSubImg = (props) => {
   );
 };
 
-export default LeftSubImg;
+export default SubImgList;

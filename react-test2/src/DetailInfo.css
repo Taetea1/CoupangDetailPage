@@ -1,0 +1,37 @@
+.savePoint {
+  display: flex;
+  padding: 16px 0;
+  border-top: 1px solid #dfe3e8;
+  border-bottom: 1px solid #dfe3e8;
+  width: 100%;
+}
+
+.save {
+  width: 49px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.saveinfo {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.benefit {
+  margin-left: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #346aff;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+li {
+  font-size: 12px;
+}
+
+.rightinfo {
+  padding: 16px 0;
+}

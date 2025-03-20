@@ -1,4 +1,5 @@
-import { Button, notification } from "antd";
+import { Button, notification, InputNumber } from "antd";
+import { UpOutlined, DownOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import calender from "./img/calender.png";
 import delivery from "./img/delievery.png";
@@ -6,8 +7,9 @@ import check from "./img/check.png";
 import coupaymoney from "./img/coupaymoney.png";
 import card from "./img/card.png";
 import bankbook from "./img/bankbook.png";
+import "./ProductPrice.css";
 
-const RightPrices = () => {
+const ProductPrice = () => {
   const [amount, setAmount] = useState(1);
   const [coupangPrice, setCoupangPrice] = useState(66000);
   const [wowPrice, setWowPrice] = useState(61000);
@@ -56,24 +58,27 @@ const RightPrices = () => {
 
       <div className="adjustbox">
         <div className="countbox">
-          <div
-            className="minus"
-            onClick={() => {
-              if (amount - 1 >= 1) {
-                setAmount(amount - 1);
-              }
-            }}
-          >
-            -
-          </div>
           <div className="amount">{amount}</div>
-          <div
-            className="plus"
-            onClick={() => {
-              setAmount(amount + 1);
-            }}
-          >
-            +
+          <div className="plus-minus-box">
+            <div
+              className="plus"
+              onClick={() => {
+                setAmount(amount + 1);
+              }}
+            >
+              <UpOutlined style={{ fontSize: "70%" }} />
+            </div>
+
+            <div
+              className="minus"
+              onClick={() => {
+                if (amount - 1 >= 1) {
+                  setAmount(amount - 1);
+                }
+              }}
+            >
+              <DownOutlined style={{ fontSize: "70%" }} />
+            </div>
           </div>
         </div>
         <Button className="cartbtn" type="primary" ghost>
@@ -109,4 +114,4 @@ const RightPrices = () => {
   );
 };
 
-export default RightPrices;
+export default ProductPrice;

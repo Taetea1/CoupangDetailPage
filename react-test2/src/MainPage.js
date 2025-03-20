@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Left from "./Left";
-import Right from "./Right";
+import CoupangMainImg from "./CoupangMainImg";
+import CoupangMainInfo from "./CoupangMainInfo";
 import { product } from "./product"; // 이미지 데이터
 
 const MainPage = () => {
@@ -28,17 +28,22 @@ const MainPage = () => {
 
   return (
     <div className="flexbox">
-      <Left
-        mainImage={hoveredImage || mainImage}
-        lists={lists}
-        hoverList={hoverList}
-      />
-      <Right
+      {/* 쿠팡 상세페이지-설명 */}
+      <CoupangMainInfo
         changeColor={changeColor}
         prevImage={prevImage}
         setHoveredImage={setHoveredImage}
         productNumber={productNumber}
       />
+
+      {/* 쿠팡 상세페이지-이미지 */}
+      <CoupangMainImg
+        mainImage={hoveredImage || mainImage}
+        lists={lists}
+        hoverList={hoverList}
+      />
+
+      {/* 쿠팡 오늘의 ㅡㄱ가가 */}
     </div>
   );
 };

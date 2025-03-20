@@ -1,0 +1,14 @@
+.thumbnail-container {
+  flex-direction: column;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+@media (max-width: 1139px) {
+  .thumbnail-container {
+    flex-direction: row;
+    padding-left: 80px;
+  }
+}
