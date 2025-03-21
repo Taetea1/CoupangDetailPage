@@ -1,34 +1,45 @@
+/* 탭 전체 스타일 */
 .custom-tabs .ant-tabs-nav {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid #555;
   border-left: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   padding: 0;
 }
 
+/* 탭 안의 글씨들 */
 .custom-tabs .ant-tabs-nav .ant-tabs-tab {
   flex-grow: 1; /* 각 탭이 고르게 넓이를 차지하게 설정 */
   justify-content: center;
   margin: 0;
+  border-bottom: 1px solid #ccc;
   background-color: #fafafa;
 }
 
+/* 각 라벨 */
 .custom-tab-label {
   font-weight: bold;
   font-size: 14px;
   color: #333;
   padding: 12px 16px;
-
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
+/* 선택된 탭 */
 .custom-tabs .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active {
-  border-bottom: none !important; /* 선택된 탭의 하단 border 제거 */
   background-color: #fff; /* 선택된 탭은 배경색을 다르게 */
+  border-bottom: none !important;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
+/* 탭 전체 크기 */
 .ant-tabs-nav-list {
   width: 100%;
+}
+
+/* 인디케이터 안 보이게 */
+.custom-tabs .ant-tabs-ink-bar {
+  display: none !important;
 }
