@@ -65,8 +65,9 @@
   font-weight: 400;
 }
 
+/* 별 */
 .anticon {
-  font-size: 15px !important;
+  font-size: 15px;
 }
 
 .custom-progress-text {

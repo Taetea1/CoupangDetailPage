@@ -9,3 +9,29 @@
   width: 100%;
   display: flex;
 }
+
+.product-mart {
+  overflow: hidden;
+}
+
+.expand {
+  max-height: fit-content;
+}
+.folded {
+  max-height: 179px;
+}
+
+.displaynone {
+  display: none;
+}
+
+.displayblock {
+  width: 100%;
+  padding: 12px 0;
+  border: 1px solid #eee;
+  background-color: transparent;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #346aff;
+}

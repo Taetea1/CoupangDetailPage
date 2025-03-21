@@ -6,20 +6,18 @@ const ProductInfoMark = (props) => {
 
   return (
     <>
-      {subtitle ? (
-        <>
-          <div className="table-element-box">
+      <div className="table-element-box">
+        {subtitle ? (
+          <>
             <div className="subtitles">{subtitle}</div>
             <div className="content">{content}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="table-element-box">
+          </>
+        ) : (
+          <>
             <div className="content"></div>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
     </>
   );
 };

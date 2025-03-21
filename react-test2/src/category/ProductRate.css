@@ -1,0 +1,8 @@
+/* 별점의 커스텀 클래스 스타일 설정 */
+.my-custom-rate .ant-rate-stars {
+  font-size: 50px !important; /* 크기 */
+}
+
+.my-custom-rate .ant-rate-star.ant-rate-star-full {
+  color: #fadb14 !important; /* 찐한 노란색 */
+}
