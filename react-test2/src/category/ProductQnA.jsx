@@ -1,4 +1,6 @@
 import "./ProductQnA.css";
+import ProductAnswer from "./ProductAnswer";
+import { QnAData } from "../data/QnA";
 
 const ProductQnA = () => {
   return (
@@ -36,6 +38,21 @@ const ProductQnA = () => {
             절대 남기지 말아주세요.
           </li>
         </ul>
+        <div className="product-qna-border">
+          {QnAData.map((x, i) => (
+            <div key={i}>
+              <ProductAnswer item={x} />
+            </div>
+          ))}
+        </div>
+
+        <div className="product-declare-box">
+          <div className="declare-text">
+            판매 부적격 상품 또는 허위과장광고 및 지식재산권을 침해하는 상품의
+            경우 신고하여 주시기 바랍니다.
+          </div>
+          <div className="declare-btn">신고하기</div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,6 @@
 import "./ProductInfoMark.css";
 
 const ProductInfoMark = (props) => {
-  console.log(props);
   const { subtitle, content } = props;
 
   return (
