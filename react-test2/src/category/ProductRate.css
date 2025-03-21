@@ -1,8 +1,47 @@
 /* 별점의 커스텀 클래스 스타일 설정 */
-.my-custom-rate .ant-rate-stars {
-  font-size: 50px !important; /* 크기 */
+.my-custom-rate .ant-rate-star .anticon {
+  font-size: 50px;
 }
 
-.my-custom-rate .ant-rate-star.ant-rate-star-full {
-  color: #fadb14 !important; /* 찐한 노란색 */
+.product-rate-title-box {
+  .product-rate-title {
+    padding-top: 26px;
+    border-top: 2px solid #c6c6c6;
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .ruleText {
+    float: right;
+    margin-top: -50px;
+    font-size: 13px;
+    color: #346aff;
+    cursor: pointer;
+  }
+}
+
+.product-rate-info {
+  color: #333;
+  font-size: 12px;
+  margin: 16px 0;
+  line-height: 17px;
+}
+
+.rateWrap {
+  display: flex;
+  align-items: center;
+  .rateNumber {
+    margin-left: 14px;
+    margin-bottom: 5px;
+    line-height: 44px;
+    font-size: 30px;
+    color: #333;
+  }
+  .detail-view {
+    font-size: 12px;
+    color: #346aff;
+    margin-left: 8px;
+  }
 }

@@ -1,4 +1,4 @@
-import { Rate, ConfigProvider } from "antd";
+import { Rate } from "antd";
 import "./ProductName.css";
 
 const ProductName = () => {
@@ -13,18 +13,13 @@ const ProductName = () => {
         <button className="sharebtn"></button>
       </div>
       <div className="ratebox">
-        <ConfigProvider
-          theme={{
-            token: {},
-            components: {
-              Rate: {
-                starSize: 20,
-              },
-            },
-          }}
-        >
-          <Rate allowHalf disabled defaultValue={4.5} />
-        </ConfigProvider>
+        <Rate
+          allowHalf
+          disabled
+          defaultValue={4.5}
+          className="product-name-rate"
+        />
+
         <div className="evalution">121개 상품평</div>
       </div>
     </div>

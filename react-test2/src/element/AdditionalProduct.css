@@ -65,9 +65,9 @@
   font-weight: 400;
 }
 
-/* 별 */
-.anticon {
-  font-size: 15px;
+/* 별점의 커스텀 클래스 스타일 설정 */
+.ant-rate-star .anticon {
+  font-size: 12px;
 }
 
 .custom-progress-text {

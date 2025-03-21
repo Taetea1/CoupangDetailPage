@@ -22,7 +22,7 @@
 
 .ratebox {
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .evalution {
@@ -46,6 +46,10 @@
   background: url(//img1a.coupangcdn.com/image/dragonstone/sdp/PCSDP_imageasset_180417-min.png)
     no-repeat -218px -209px;
   border: none;
+}
+
+.product-name-rate .ant-rate-star .anticon {
+  font-size: 20px;
 }
 
 @media (max-width: 1139px) {
