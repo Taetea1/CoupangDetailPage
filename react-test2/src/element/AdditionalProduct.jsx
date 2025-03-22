@@ -3,14 +3,33 @@ import "./AdditionalProduct.css";
 
 // 각 이미지 컴포넌트
 const AdditionalProduct = (props) => {
-  const { type, item } = props;
+  const { type, scale, item } = props;
   return (
     <div>
-      <img className="image-box" src={item.src} alt="상품이미지" />
+      <div className="image-wrap">
+        <img
+          className={`image-box ${
+            scale === "false" || type !== "deleteEl" ? "" : "image-box-scale"
+          }`}
+          src={item.src}
+          alt="상품이미지"
+        />
+      </div>
+
       <div className={type === "deleteEl" ? "deleteElement" : "badge"}>
         특가진행중
       </div>
-      <div className="product-name">{item.title}</div>
+      <div
+        className={`product-name ${
+          type !== "deleteEl"
+            ? ""
+            : scale === "false"
+            ? "title-botton-line"
+            : "product-name-blue"
+        }`}
+      >
+        {item.title}
+      </div>
       <div className={type === "deleteEl" ? "deleteElement" : "percent-price"}>
         <div className="wow">와우할인가</div>
         <div className="origin-price">

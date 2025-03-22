@@ -11,8 +11,17 @@
   justify-content: center;
 }
 
+.with-product {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
 .global-sale {
   width: 1280px;
+  margin: 0 auto;
+}
+.toygate-sale {
+  width: 980px;
   margin: 0 auto;
 }
 

@@ -9,11 +9,6 @@
   margin: 8px 0 5px 0;
 }
 
-.image-box {
-  width: 160px;
-  height: 160px;
-}
-
 .product-name {
   max-width: 160px;
   font-size: 14px;
@@ -92,4 +87,30 @@
 
 .deleteElement {
   display: none;
+}
+
+.swiper-slide:hover {
+  cursor: pointer;
+  .product-name-blue {
+    color: rgb(58, 58, 254);
+  }
+  .title-botton-line {
+    text-decoration: underline;
+  }
+}
+
+.image-wrap {
+  display: inline-block;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  .image-box {
+    width: 100%;
+  }
+  .image-box-scale {
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.image-box-scale:hover {
+  transform: scale(1.1);
 }

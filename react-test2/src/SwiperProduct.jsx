@@ -14,7 +14,7 @@ const shuffleData = (array) => {
 };
 
 const SwiperProduct = (props) => {
-  const { type, title, colorText } = props;
+  const { type, title, colorText, scale } = props;
   return (
     <div className="today-box">
       <div className={type === "deleteEl" ? "deleteEl-title" : "product-title"}>
@@ -35,7 +35,7 @@ const SwiperProduct = (props) => {
           {shuffleData(todayProduct).map((item, i) => {
             return (
               <SwiperSlide key={i}>
-                <AdditionalProduct type={type} item={item} />
+                <AdditionalProduct type={type} scale={scale} item={item} />
               </SwiperSlide>
             );
           })}

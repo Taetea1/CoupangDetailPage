@@ -12,14 +12,32 @@ const MainPage = () => {
       </div>
 
       {/* 쿠팡 오늘의 판매자 특가 */}
-      <SwiperProduct type="red" title="오늘의 " colorText="판매자 특가" />
+      <div className="toygate-sale">
+        <SwiperProduct type="red" title="오늘의 " colorText="판매자 특가" />
+      </div>
 
       {/* 해당 상품 카테고리 */}
       <Category />
 
-      {/* 글로벌 특가 */}
+      <div className="with-product">
+        {/* 다른 고객이 함께 구매한 상품 */}
+        <div className="global-sale">
+          <SwiperProduct title="다른 고객이 함께 구매한 상품" type="deleteEl" />
+        </div>
+
+        {/* 토이게이트의 다른 상품들->**이거 컴포넌트 다시 만들기 */}
+        <div className="toygate-sale">
+          <SwiperProduct
+            title="토이게이트의 다른 상품들"
+            type="deleteEl"
+            scale="false"
+          />
+        </div>
+      </div>
+
+      {/* 연관 추천 상품광고 */}
       <div className="global-sale">
-        <SwiperProduct title="다른 고객이 함께 구매한 상품" type="deleteEl" />
+        <SwiperProduct title="연관 추천 상품" type="deleteEl" />
       </div>
 
       {/* 글로벌 특가 */}
