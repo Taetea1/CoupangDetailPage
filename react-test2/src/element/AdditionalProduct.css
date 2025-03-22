@@ -23,7 +23,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .percent-price {
@@ -88,4 +88,8 @@
 
 .ant-progress-outer {
   width: 90% !important;
+}
+
+.deleteElement {
+  display: none;
 }

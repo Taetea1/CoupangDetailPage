@@ -13,8 +13,11 @@
   font-size: 23px;
   font-weight: 900;
   margin-bottom: 30px;
-  span {
+  .red {
     color: #e12705;
+  }
+  .purple {
+    color: #9e20d3;
   }
 }
 
@@ -32,4 +35,11 @@
   right: -5%;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+.deleteEl-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  padding-bottom: 20px;
 }

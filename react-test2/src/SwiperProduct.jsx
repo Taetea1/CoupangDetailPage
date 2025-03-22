@@ -13,11 +13,13 @@ const shuffleData = (array) => {
     .map(({ item }) => item);
 };
 
-const SwiperProduct = () => {
+const SwiperProduct = (props) => {
+  const { type, title, colorText } = props;
   return (
     <div className="today-box">
-      <div className="product-title">
-        오늘의 <span>판매가 특가</span>
+      <div className={type === "deleteEl" ? "deleteEl-title" : "product-title"}>
+        {title}
+        <span className={type === "red" ? "red" : "purple"}>{colorText}</span>
       </div>
       <div className="swiper-wrap">
         <Swiper
@@ -33,7 +35,7 @@ const SwiperProduct = () => {
           {shuffleData(todayProduct).map((item, i) => {
             return (
               <SwiperSlide key={i}>
-                <AdditionalProduct item={item} />
+                <AdditionalProduct type={type} item={item} />
               </SwiperSlide>
             );
           })}
