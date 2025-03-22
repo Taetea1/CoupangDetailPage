@@ -1,0 +1,14 @@
+.cancel-info {
+  color: #768695;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  margin: -30px 0 40px;
+}
+
+.confirm-title {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}

@@ -1,0 +1,21 @@
+.deliver-wrap {
+  margin-bottom: 40px;
+}
+
+.deliever-box {
+  display: flex;
+  width: 100%;
+  .deliever-first {
+    width: 50%;
+    line-height: 30px;
+  }
+  .deliever-second {
+    line-height: 28px;
+  }
+}
+
+.deliever-title {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}

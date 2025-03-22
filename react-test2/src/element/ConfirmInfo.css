@@ -1,0 +1,39 @@
+.confirm-box {
+  display: flex;
+  padding: 17px 0 17px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  color: #333;
+  border-top: 1px solid #eee;
+  align-items: center;
+  .confirm-img {
+    display: flex;
+    align-items: center;
+    img {
+      width: 40px;
+    }
+  }
+
+  .confirm-info-wrap {
+    margin-left: 10px;
+    .confirm-title-box {
+      display: flex;
+      align-items: center;
+      div {
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      }
+      a {
+        margin-left: 5px;
+        font-size: 18px;
+      }
+    }
+    .confirm-content {
+      padding-top: 6px;
+      font-size: 12px;
+      color: #333;
+    }
+  }
+}
