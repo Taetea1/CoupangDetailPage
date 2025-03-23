@@ -58,6 +58,19 @@ const MainPage = () => {
           num={7}
         />
       </div>
+
+      <div className="relation-product-box">
+        <div className="relation-product-title">이 상품과 관련된 카테고리</div>
+        <div className="link-box">
+          <a href="https://www.coupang.com/np/categories/333113">
+            업라이트피아노
+          </a>
+          <div className="relation-product-link"></div>
+          <a href="https://www.coupang.com/np/categories/333114">
+            그랜드피아노
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
