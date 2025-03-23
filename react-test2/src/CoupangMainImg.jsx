@@ -4,11 +4,16 @@ import MainImg from "./MainImg";
 
 // 메인 이미지
 const CoupangMainImg = (props) => {
-  const { mainImage, lists, hoverList } = props;
+  const { hoveredIndex, setHoveredIndex, mainImage, lists, hoverList } = props;
   return (
     <div className="imgwrap">
       <MainImg mainImage={mainImage} />
-      <SubImgList lists={lists} hoverList={hoverList} />
+      <SubImgList
+        lists={lists}
+        hoverList={hoverList}
+        hoveredIndex={hoveredIndex}
+        setHoveredIndex={setHoveredIndex}
+      />
     </div>
   );
 };

@@ -16,31 +16,55 @@ const AdditionalProduct = (props) => {
         />
       </div>
 
-      <div className={type === "deleteEl" ? "deleteElement" : "badge"}>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "badge"
+        }
+      >
         특가진행중
       </div>
       <div
         className={`product-name ${
-          type !== "deleteEl"
-            ? ""
+          type === "deleteEl"
+            ? "product-name-blue"
             : scale === "false"
             ? "title-botton-line"
-            : "product-name-blue"
+            : ""
         }`}
       >
         {item.title}
       </div>
-      <div className={type === "deleteEl" ? "deleteElement" : "percent-price"}>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "percent-price"
+        }
+      >
         <div className="wow">와우할인가</div>
         <div className="origin-price">
           {item.sale}% <span>{item.orginPrice}</span>
         </div>
       </div>
       <div className="now-price">{item.price}원</div>
-      <div className={type === "deleteEl" ? "deleteElement" : "arrive"}>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "arrive"
+        }
+      >
         {item.arriveDate} 도착 예정
       </div>
-      <div className={type === "deleteEl" ? "deleteElement" : "free-delievery"}>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "free-delievery"
+        }
+      >
         무료배송
       </div>
       {item.rate ? (
@@ -53,7 +77,9 @@ const AdditionalProduct = (props) => {
       )}
       <br />
       <Progress
-        className={type === "deleteEl" ? "deleteElement" : ""}
+        className={
+          type === "deleteEl" || type === "deleteEl-dif" ? "deleteElement" : ""
+        }
         percent={50}
         strokeColor="#454f5b"
         format={() => (

@@ -15,7 +15,7 @@ const shuffleData = (array) => {
 };
 
 const SwiperProduct = (props) => {
-  const { type, title, sub, colorText, scale } = props;
+  const { type, title, sub, colorText, scale, num } = props;
 
   // 네비게이션 버튼을 위한 useRef
   const prevRef = useRef(null);
@@ -37,7 +37,13 @@ const SwiperProduct = (props) => {
 
   return (
     <div className="today-box">
-      <div className={type === "deleteEl" ? "deleteEl-title" : "product-title"}>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteEl-title"
+            : "product-title"
+        }
+      >
         {title}
         <span className={type === "red" ? "red" : "purple"}>{colorText}</span>
         <span className="ad">{sub}</span>
@@ -45,9 +51,9 @@ const SwiperProduct = (props) => {
       <div className="swiper-wrap">
         <Swiper
           modules={[Navigation]} // 네비게이션 모듈 추가
-          spaceBetween={30}
-          slidesPerView={5}
-          slidesPerGroup={5}
+          spaceBetween={14}
+          slidesPerView={num === 7 ? 7 : 5}
+          slidesPerGroup={num === 7 ? 7 : 5}
           onSwiper={setSwiperInstance} // Swiper 인스턴스를 상태로 저장
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }} // ref 연결
         >

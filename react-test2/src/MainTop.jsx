@@ -11,6 +11,7 @@ const MainTop = () => {
   const [productNumber, setProductNumber] = useState(
     "6710871611 - 14799784162"
   ); //상품 번호
+  const [hoveredIndex, setHoveredIndex] = useState(0);
 
   const hoverList = (image) => {
     setHoveredImage(image);
@@ -18,6 +19,7 @@ const MainTop = () => {
   };
 
   const changeColor = (color) => {
+    setHoveredIndex(0);
     setMainImage(product[color].main);
     setLists(product[color].lists);
     setHoveredImage(null);
@@ -37,6 +39,8 @@ const MainTop = () => {
 
       {/* 쿠팡 상세페이지-이미지 */}
       <CoupangMainImg
+        hoveredIndex={hoveredIndex}
+        setHoveredIndex={setHoveredIndex}
         mainImage={hoveredImage || mainImage}
         lists={lists}
         hoverList={hoverList}

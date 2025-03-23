@@ -38,7 +38,7 @@ const MainPage = () => {
         <div className="toygate-sale">
           <SwiperProduct
             title="토이게이트의 다른 상품들"
-            type="deleteEl"
+            type="deleteEl-dif"
             scale="false"
           />
         </div>
@@ -55,6 +55,7 @@ const MainPage = () => {
           type="purple"
           title="전세계 핫딜 "
           colorText="로켓직구 글로벌특가"
+          num={7}
         />
       </div>
     </div>

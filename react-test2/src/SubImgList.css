@@ -1,9 +1,15 @@
 .thumbnail-container {
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .thumbnail {
   cursor: pointer;
+  margin-right: 5px;
+}
+
+.thumbnail.hovered {
+  border: 1.5px solid blue;
 }
 
 @media (max-width: 1139px) {

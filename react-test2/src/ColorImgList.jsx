@@ -1,8 +1,10 @@
 import { colors } from "./data/product"; // 색상별 이미지 데이터
+import { useState } from "react";
 import "./ColorImgList.css";
 
 const ColorImgList = (props) => {
   const { changeColor, hoverRightList, prevImage } = props;
+  const [clickColor, setClickColor] = useState("black");
 
   const hoverColor = (color) => {
     hoverRightList(colors[color]);
@@ -12,6 +14,11 @@ const ColorImgList = (props) => {
     hoverRightList(prevImage);
   };
 
+  const handleClick = (color) => {
+    changeColor(color);
+    setClickColor(color); // 클릭된 색상 업데이트
+  };
+
   return (
     <div className="color-options">
       {Object.keys(colors).map((color) => (
@@ -19,10 +26,10 @@ const ColorImgList = (props) => {
           key={color}
           src={colors[color]}
           alt={color}
-          className="color-option"
+          className={`color-option ${clickColor === color ? "selected" : ""}`}
           onMouseEnter={() => hoverColor(color)}
           onMouseLeave={handleColorLeave}
-          onClick={() => changeColor(color)}
+          onClick={() => handleClick(color)}
         />
       ))}
     </div>
