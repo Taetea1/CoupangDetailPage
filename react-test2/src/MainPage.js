@@ -46,12 +46,7 @@ const MainPage = () => {
 
       {/* 연관 추천 상품광고 */}
       <div className="global-sale">
-        <SwiperProduct
-          title="연관 추천 상품"
-          sub="광고"
-          type="deleteEl"
-          slice={5}
-        />
+        <SwiperProduct title="연관 추천 상품" sub="광고" type="deleteEl" />
       </div>
 
       {/* 글로벌 특가 */}

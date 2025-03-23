@@ -15,7 +15,7 @@ const shuffleData = (array) => {
 };
 
 const SwiperProduct = (props) => {
-  const { type, title, sub, colorText, scale, slice } = props;
+  const { type, title, sub, colorText, scale } = props;
 
   // 네비게이션 버튼을 위한 useRef
   const prevRef = useRef(null);
@@ -24,12 +24,16 @@ const SwiperProduct = (props) => {
 
   useEffect(() => {
     if (swiperInstance && prevRef.current && nextRef.current) {
-      swiperInstance.params.navigation.prevEl = prevRef.current;
-      swiperInstance.params.navigation.nextEl = nextRef.current;
-      swiperInstance.navigation.init();
-      swiperInstance.navigation.update();
+      setTimeout(() => {
+        if (swiperInstance?.params?.navigation) {
+          swiperInstance.params.navigation.prevEl = prevRef.current;
+          swiperInstance.params.navigation.nextEl = nextRef.current;
+          swiperInstance.navigation.init();
+          swiperInstance.navigation.update();
+        }
+      }, 100); // Swiper가 완전히 생성된 후 실행
     }
-  }, [swiperInstance]); // Swiper 인스턴스가 설정될 때만 실행
+  }, [swiperInstance]);
 
   return (
     <div className="today-box">
@@ -41,7 +45,7 @@ const SwiperProduct = (props) => {
       <div className="swiper-wrap">
         <Swiper
           modules={[Navigation]} // 네비게이션 모듈 추가
-          spaceBetween={50}
+          spaceBetween={30}
           slidesPerView={5}
           slidesPerGroup={5}
           onSwiper={setSwiperInstance} // Swiper 인스턴스를 상태로 저장
