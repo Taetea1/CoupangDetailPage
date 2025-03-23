@@ -133,3 +133,58 @@
   display: flex;
   justify-content: center;
 }
+
+.swiper-none {
+  display: none;
+  touch-action: none;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .brand-info-img {
+    max-width: 140px;
+    max-height: 140px;
+    width: auto;
+    height: auto;
+    margin: auto;
+
+    img {
+      max-width: 140px;
+      max-height: 140px;
+      margin: auto;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .brand-info-text {
+    margin-bottom: 10px;
+    color: #212b36;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.33;
+    word-break: keep-all;
+    margin-top: 20px;
+  }
+
+  .brand-info-num {
+    margin-bottom: 20px;
+    color: #111;
+    font-size: 12px;
+    span {
+      font-weight: bold;
+      color: #346aff;
+    }
+  }
+  .brand-info-btn {
+    border: 1px solid #346aff;
+    color: #346aff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 2px;
+  }
+}

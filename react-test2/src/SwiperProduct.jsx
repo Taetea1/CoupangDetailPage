@@ -6,6 +6,7 @@ import "./SwiperProduct.css";
 import AdditionalProduct from "./element/AdditionalProduct";
 import { todayProduct } from "./data/todayProduct";
 import { useRef, useState, useEffect } from "react";
+import brandimg from "./img/brandLogo.png";
 
 const shuffleData = (array) => {
   return array
@@ -57,13 +58,35 @@ const SwiperProduct = (props) => {
           onSwiper={setSwiperInstance} // Swiper 인스턴스를 상태로 저장
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }} // ref 연결
         >
-          {shuffleData(todayProduct).map((item, i) => {
-            return (
-              <SwiperSlide key={i}>
-                <AdditionalProduct type={type} scale={scale} item={item} />
+          <>
+            {shuffleData(todayProduct)
+              .slice(0, type === "deleteEl-dif" ? 4 : todayProduct.length)
+              .map((item, i) => {
+                return (
+                  <SwiperSlide key={i}>
+                    <AdditionalProduct type={type} scale={scale} item={item} />
+                  </SwiperSlide>
+                );
+              })}
+            {type === "deleteEl-dif" ? (
+              <SwiperSlide>
+                <div className="brand-info">
+                  <div className="brand-info-img">
+                    <img src={brandimg} alt="브랜드로고" />
+                  </div>
+                  <div className="brand-info-text">
+                    같은 브랜드 상품을 한곳에서 모아볼 수 있어요!
+                  </div>
+                  <div className="brand-info-num">
+                    총 <span>162</span> 개
+                  </div>
+                  <div className="brand-info-btn">브랜드샵 구경할까요?</div>
+                </div>
               </SwiperSlide>
-            );
-          })}
+            ) : (
+              <></>
+            )}
+          </>
         </Swiper>
 
         {/* 네비게이션 버튼 */}
@@ -74,7 +97,9 @@ const SwiperProduct = (props) => {
               ? "swiper-delete-prev"
               : type === "red"
               ? "swiper-red-prev"
-              : "swiper-remain-prev"
+              : type !== "deleteEl-dif"
+              ? "swiper-remain-prev"
+              : "swiper-none"
           }`}
         ></div>
         <div
@@ -84,7 +109,9 @@ const SwiperProduct = (props) => {
               ? "swiper-delete-next"
               : type === "red"
               ? "swiper-red-next"
-              : "swiper-remain-next"
+              : type !== "deleteEl-dif"
+              ? "swiper-remain-next"
+              : "swiper-none"
           }`}
         ></div>
       </div>
