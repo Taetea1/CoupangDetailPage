@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "./SwiperProduct.css";
 import AdditionalProduct from "./element/AdditionalProduct";
 import { todayProduct } from "./data/todayProduct";
+import { useRef, useState, useEffect } from "react";
 
 const shuffleData = (array) => {
   return array
@@ -14,12 +15,28 @@ const shuffleData = (array) => {
 };
 
 const SwiperProduct = (props) => {
-  const { type, title, colorText, scale } = props;
+  const { type, title, sub, colorText, scale, slice } = props;
+
+  // 네비게이션 버튼을 위한 useRef
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null); // Swiper 인스턴스 저장
+
+  useEffect(() => {
+    if (swiperInstance && prevRef.current && nextRef.current) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  }, [swiperInstance]); // Swiper 인스턴스가 설정될 때만 실행
+
   return (
     <div className="today-box">
       <div className={type === "deleteEl" ? "deleteEl-title" : "product-title"}>
         {title}
         <span className={type === "red" ? "red" : "purple"}>{colorText}</span>
+        <span className="ad">{sub}</span>
       </div>
       <div className="swiper-wrap">
         <Swiper
@@ -27,10 +44,8 @@ const SwiperProduct = (props) => {
           spaceBetween={50}
           slidesPerView={5}
           slidesPerGroup={5}
-          navigation={{
-            nextEl: ".swiper-button-next", // 다음 버튼
-            prevEl: ".swiper-button-prev", // 이전 버튼
-          }}
+          onSwiper={setSwiperInstance} // Swiper 인스턴스를 상태로 저장
+          navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }} // ref 연결
         >
           {shuffleData(todayProduct).map((item, i) => {
             return (
@@ -42,8 +57,26 @@ const SwiperProduct = (props) => {
         </Swiper>
 
         {/* 네비게이션 버튼 */}
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+        <div
+          ref={prevRef}
+          className={`swiper-button-prev ${
+            type === "deleteEl"
+              ? "swiper-delete-prev"
+              : type === "red"
+              ? "swiper-red-prev"
+              : "swiper-remain-prev"
+          }`}
+        ></div>
+        <div
+          ref={nextRef}
+          className={`swiper-button-next ${
+            type === "deleteEl"
+              ? "swiper-delete-next"
+              : type === "red"
+              ? "swiper-red-next"
+              : "swiper-remain-next"
+          }`}
+        ></div>
       </div>
     </div>
   );

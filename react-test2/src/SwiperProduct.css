@@ -1,11 +1,28 @@
 .today-box {
   margin: 50px 0;
+  .ad {
+    line-height: 20px;
+    font-size: 13px;
+    color: #555;
+    margin-left: 5px;
+    font-weight: 400;
+    vertical-align: text-top;
+  }
 }
 
 .swiper-wrap {
   position: relative;
   width: 100%;
   margin: 0 auto;
+}
+
+.swiper-wrap:hover {
+  .swiper-delete-prev,
+  .swiper-delete-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .product-title {
@@ -23,17 +40,82 @@
 .swiper-button-prev {
   position: absolute;
   top: 50%;
-  left: -5%;
   transform: translateY(-50%);
   z-index: 10;
+  width: 36px;
+  height: 39px;
 }
 
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  right: -5%;
   transform: translateY(-50%);
   z-index: 10;
+  width: 36px;
+  height: 39px;
+}
+.swiper-remain-prev {
+  left: -3%;
+  background: url(./img/swiper-navi.png) no-repeat;
+  text-indent: -9999em;
+  background-position: -2px -43px;
+}
+.swiper-remain-next {
+  right: 1%;
+  background: url(./img/swiper-navi.png) no-repeat;
+  text-indent: -9999em;
+  background-position: -78px -2px;
+}
+
+.swiper-red-prev {
+  left: -4%;
+  background: url(./img/swiper-navi.png) no-repeat;
+  text-indent: -9999em;
+  background-position: -2px -43px;
+}
+.swiper-red-next {
+  right: -5%;
+  background: url(./img/swiper-navi.png) no-repeat;
+  text-indent: -9999em;
+  background-position: -78px -2px;
+}
+
+.swiper-delete-prev {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #ffffff;
+  opacity: 0.9;
+  color: rgb(169, 169, 169);
+  width: 40px;
+  height: 50px;
+  border-radius: 2px;
+}
+
+.swiper-delete-prev:hover {
+  color: rgb(36, 36, 255);
+}
+
+.swiper-delete-next {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 4.8%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #ffffff;
+  opacity: 0.9;
+  color: rgb(169, 169, 169);
+  width: 40px;
+  height: 50px;
+  border-radius: 2px;
+}
+
+.swiper-delete-next:hover {
+  color: rgb(36, 36, 255);
 }
 
 .deleteEl-title {

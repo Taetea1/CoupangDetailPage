@@ -11,6 +11,15 @@ const MainPage = () => {
         <MainTop />
       </div>
 
+      {/* 함께 비교하면 좋을 상품 */}
+      <div className="global-sale">
+        <SwiperProduct
+          title="함께 비교하면 좋을 상품"
+          sub="광고"
+          type="deleteEl"
+        />
+      </div>
+
       {/* 쿠팡 오늘의 판매자 특가 */}
       <div className="toygate-sale">
         <SwiperProduct type="red" title="오늘의 " colorText="판매자 특가" />
@@ -37,7 +46,12 @@ const MainPage = () => {
 
       {/* 연관 추천 상품광고 */}
       <div className="global-sale">
-        <SwiperProduct title="연관 추천 상품" type="deleteEl" />
+        <SwiperProduct
+          title="연관 추천 상품"
+          sub="광고"
+          type="deleteEl"
+          slice={5}
+        />
       </div>
 
       {/* 글로벌 특가 */}
