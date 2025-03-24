@@ -6,10 +6,6 @@ import ProductDelievery from "./ProductDelievery";
 import "./Category.css";
 
 const Category = () => {
-  const onChange = (key) => {
-    console.log(key);
-  };
-
   const items = [
     {
       key: "1",
@@ -33,14 +29,7 @@ const Category = () => {
     },
   ];
 
-  return (
-    <Tabs
-      defaultActiveKey="1"
-      items={items}
-      onChange={onChange}
-      className="custom-tabs"
-    />
-  );
+  return <Tabs defaultActiveKey="1" items={items} className="custom-tabs" />;
 };
 
 export default Category;

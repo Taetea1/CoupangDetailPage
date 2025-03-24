@@ -1,4 +1,6 @@
 import { Rate } from "antd";
+import ImgElement from "../element/ImgElement";
+import { rateImg } from "../data/rateImg";
 import "./ProductRate.css";
 
 const ProductRate = () => {
@@ -15,6 +17,11 @@ const ProductRate = () => {
         <Rate disabled value={4.5} className="my-custom-rate" />
         <div className="rateNumber">121</div>
         <div className="detail-view">자세히보기{">"}</div>
+      </div>
+      <div className="rateImgBox">
+        {rateImg.map((item, i) => {
+          return <ImgElement key={i} item={item.src} type={item.type} />;
+        })}
       </div>
     </div>
   );
