@@ -1,0 +1,21 @@
+.coupang-tag {
+  font-size: 11px;
+  color: #333;
+  align-items: center;
+  padding: 16px 0;
+  list-style: none;
+  a {
+    display: block;
+    color: #212b36;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+  }
+}
+
+.division-box {
+  margin: 0 4px 1px;
+  font-size: 12px;
+  color: #aaaaaa;
+}

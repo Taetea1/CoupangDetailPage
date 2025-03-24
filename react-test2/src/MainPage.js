@@ -2,10 +2,19 @@ import "./App.css";
 import MainTop from "./MainTop";
 import SwiperProduct from "./SwiperProduct";
 import Category from "./category/Category";
+import CoupangTag from "./element/CoupangTag";
+import { tagCategory } from "./data/tagCategory";
 
 const MainPage = () => {
   return (
     <div className="main-wrap">
+      {/* 종류 카테고리 */}
+      <ul className="coupang-tag-box">
+        {tagCategory.map((cate, i) => (
+          <CoupangTag key={i} name={cate.name} type={cate.type} />
+        ))}
+      </ul>
+
       <div className="flexbox">
         {/* 메인 탑부분 */}
         <MainTop />

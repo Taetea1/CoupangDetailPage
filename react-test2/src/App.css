@@ -56,6 +56,11 @@
   display: flex;
 }
 
+.coupang-tag-box {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1139px) {
   .flexbox {
     flex-direction: column-reverse;
