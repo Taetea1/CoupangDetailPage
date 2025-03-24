@@ -69,7 +69,7 @@ const AdditionalProduct = (props) => {
       </div>
       {item.rate ? (
         <>
-          <Rate allowHalf defaultValue={2.5} disabled />
+          <Rate allowHalf defaultValue={item.rateStar} disabled />
           <span className="rate-text">({item.rate})</span>
         </>
       ) : (
