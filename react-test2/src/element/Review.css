@@ -1,0 +1,113 @@
+.review-wrap {
+  border-bottom: 1px solid #a5a5a5;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  .profile-wrap {
+    display: flex;
+    .review-proflie-img {
+      width: 40px;
+      height: 40px;
+      margin-right: 6px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .review-nick {
+      height: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #111;
+    }
+    .rate-date {
+      display: flex;
+    }
+    .date-review {
+      margin-left: 10px;
+      padding-top: 3px;
+      font-size: 12px;
+      color: #555;
+    }
+    .review-sale {
+      margin: 2px 0 1px 0;
+      font-size: 12px;
+      color: #555;
+      white-space: normal;
+    }
+  }
+
+  .review-product-name {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .review-text {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+  }
+  .help-wrap {
+    display: flex;
+    justify-content: space-between;
+    .help-box {
+      display: flex;
+      align-items: center;
+      .help-review {
+        font-size: 11px;
+      }
+      .good-help {
+        margin-left: 10px;
+        padding: 5px;
+        border: 1px solid #346aff;
+        color: #346aff;
+        background-color: #fff;
+        letter-spacing: -1px;
+        outline: 0;
+      }
+      .bad-help {
+        margin-left: 3px;
+        padding: 5px;
+        border: 1px solid #346aff;
+        color: #346aff;
+        background-color: #fff;
+        letter-spacing: -1px;
+        outline: 0;
+      }
+      .good-help:hover,
+      .bad-help:hover {
+        background-color: #346aff;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .declare-text {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      background-color: #fff;
+      color: #346aff;
+    }
+    .declare-text:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.review-image-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.coupang-Experience {
+  width: 48px;
+  height: 16px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
