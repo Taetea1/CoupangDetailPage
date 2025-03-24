@@ -1,0 +1,39 @@
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .order-text {
+    display: flex;
+    align-items: center;
+    .order-text-best {
+      color: white;
+    }
+    .order-stick {
+      width: 1px;
+      height: 18px;
+      background: rgb(170, 170, 170);
+      margin: 0 15px;
+    }
+    .order-text-recent {
+      color: rgb(170, 170, 170);
+    }
+  }
+
+  .rate-label {
+    display: flex;
+  }
+}
+
+.ant-select-selection-item {
+  display: flex !important;
+}
+
+.ant-select-selector {
+  margin-left: 10px !important;
+}
+
+.ant-btn {
+  margin-left: 0;
+  border-left: 1px solid white;
+}

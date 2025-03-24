@@ -1,5 +1,6 @@
 import { Rate } from "antd";
 import ImgElement from "../element/ImgElement";
+import SearchRate from "../element/SearchRate";
 import { rateImg } from "../data/rateImg";
 import "./ProductRate.css";
 
@@ -22,6 +23,9 @@ const ProductRate = () => {
         {rateImg.map((item, i) => {
           return <ImgElement key={i} item={item.src} type={item.type} />;
         })}
+      </div>
+      <div className="search-rate-wrap">
+        <SearchRate />
       </div>
     </div>
   );
