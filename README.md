@@ -37,93 +37,278 @@
 
 ## 💎화면 영상
 
-### 개수 수정
+### 1️⃣개수 수정
 ![Image](https://github.com/user-attachments/assets/b3308ef6-84af-459d-9d2d-577dfd964b67)
 - 개수 변경시 해당 개수에 맞게 가격 변경
 
 <br>
 
-### hover시 메인이미지 변경
+### 2️⃣hover시 메인이미지 변경
 ![Image](https://github.com/user-attachments/assets/6924bd6c-294f-4cc5-b7c9-c2f4279ac96b)
 - 오른쪽 작은 이미지 hover시 메인이미지 변경
 - 왼쪽에 색상 선택 이미지 hover시 메인이미지 변경하고, 마우스를 떼면 오른쪽에서 선택되었던 원래 메인이미지로 변경
 
 <br>
 
-### 클릭시 해당 종류로 변경
+### 3️⃣클릭시 해당 종류로 변경
 ![Image](https://github.com/user-attachments/assets/ca751ad0-9cc6-4b25-a8a8-380bfdd8e6ca)
 - 왼쪽에 색상 선택 이미지 클릭시 해당 종류의 이미지들로 데이터 변경
 
 <br>
 
-### type에 따라 Swiper 모양 변경(1)
-![Image](https://github.com/user-attachments/assets/e30676d6-fd8c-4052-bfef-190a45366f54)
+### 4️⃣type에 따라 Swiper 모양 변경
+  4-1)![Image](https://github.com/user-attachments/assets/e30676d6-fd8c-4052-bfef-190a45366f54)
+  - 같은 컴포넌트를 사용하여 다른 스타일 적용
+  - 위에는 hover시 파란글자와 navigation 보이기, 이미지 hover시 scale
+  - 아래는 필요한 내용 다 나타내기
 
+  4-2)![Image](https://github.com/user-attachments/assets/cf1ffa3d-1e4c-4d29-9b23-399b7fb9a0b9)
+  - 같은 컴포넌트로 다른 스타일 적용
+  - 위에는 hover시 navigation나타나기 및 파란글자, 이미지 hover시 scale
+  - 아래는 hover시 글자에 underline, 스와이퍼 없애고 필요한 부분만 삽입
+  
+  4-3)![Image](https://github.com/user-attachments/assets/05ed03be-dbfe-4c87-b9d0-653ff2bdeaf0)
+  
+<br>
+
+### 5️⃣상품상세 및 탑버튼
+![Image](https://github.com/user-attachments/assets/31d9de4c-dd93-4477-9b70-a38e52f8261d)
+- 상세정보 더보기/접기 가능
+- Top버튼 클릭시 맨 위로 부드럽게 이동
 
 <br>
 
-### 상품상세 및 탑버튼
-
-
-
-<br>
-
-### 상품평
-
-
+### 6️⃣상품평
+![Image](https://github.com/user-attachments/assets/be17fb77-d8cc-4614-96f6-2e4902b8ee5d)
+- 하나의 컴포넌트로 type에 따라 이미지 스타일 변경
+- 하나의 컴포넌트로 type에 따라 리뷰 스타일 변경
 
 <br>
 
-### 상품문의
+### 7️⃣상품문의
 ![Image](https://github.com/user-attachments/assets/53d7144a-5f2c-4ed0-84e0-f0b2d2138fbd)
+- 상품문의 클릭시 해당 정보 출력
+- 하나의 컴포넌트로 type에 따라 질문 또는 답변으로 출력
 
 <br>
 
-### 반품안내
+### 8️⃣반품안내
 ![Image](https://github.com/user-attachments/assets/e633a27d-13fb-4b1a-a595-b9b0c3cf7c43)
+- 제목과 내용만 있는 하나의 컴포넌트로 스타일이 다른 테이블 구성
+  - flex가 있는 테이블과 상세내용이 있는 테이블, 이렇게 2가지 테이블로 나눔
+- 상품인증정보 컴포넌트로 데이터만 다르게 사용
 
 <br>
 
-### type에 따라 Swiper 모양 변경(2)
-![Image](https://github.com/user-attachments/assets/cf1ffa3d-1e4c-4d29-9b23-399b7fb9a0b9)
-
-<br>
-
-### type에 따라 Swiper 모양 변경(3)
-
-
-<br>
-
-### 새로고침시 랜덤
+### 9️⃣새로고침시 랜덤
 ![Image](https://github.com/user-attachments/assets/4725f92b-2418-4798-b554-b69760bb685e)
+- 데이터를 랜덤으로 돌려 새로운 데이터도 앞에서 볼 수 있도록 구성
 
 <br>
 
-### 반응형
-
+### 🔟반응형
+![Image](https://github.com/user-attachments/assets/a78a2054-b01c-44ed-856e-aea1546911d5)
 
 <br>
 
 ## 💫주요 Component
+### MainPage.js
 ```jsx
-import React from "react";
+const MainPage = () => {
+  return (
+    <div className="main-wrap">
+      {/* 종류 카테고리 */}
+      <ul className="coupang-tag-box">
+        {tagCategory.map((cate, i) => (
+          <CoupangTag key={i} name={cate.name} type={cate.type} />
+        ))}
+      </ul>
 
-function App() {
-  return <h1>Hello, GitHub!</h1>;
-}
+      <div className="flexbox">
+        {/* 메인 탑부분 */}
+        <MainTop />
+      </div>
 
-export default App;
+      {/* 함께 비교하면 좋을 상품 */}
+      <div className="global-sale">
+        <SwiperProduct
+          title="함께 비교하면 좋을 상품"
+          sub="광고"
+          type="deleteEl"
+        />
+      </div>
+
+      {/* 쿠팡 오늘의 판매자 특가 */}
+      <div className="toygate-sale">
+        <SwiperProduct type="red" title="오늘의 " colorText="판매자 특가" />
+      </div>
+
+      {/* 해당 상품 카테고리 */}
+      <Category />
+
+      <div className="with-product">
+        {/* 다른 고객이 함께 구매한 상품 */}
+        <div className="global-sale">
+          <SwiperProduct title="다른 고객이 함께 구매한 상품" type="deleteEl" />
+        </div>
+
+        {/* 토이게이트의 다른 상품들 */}
+        <div className="toygate-sale">
+          <SwiperProduct
+            title="토이게이트의 다른 상품들"
+            type="deleteEl-dif"
+            scale="false"
+          />
+        </div>
+      </div>
+
+      {/* 연관 추천 상품광고 */}
+      <div className="global-sale">
+        <SwiperProduct title="연관 추천 상품" sub="광고" type="deleteEl" />
+      </div>
+
+      {/* 글로벌 특가 */}
+      <div className="global-sale">
+        <SwiperProduct
+          type="purple"
+          title="전세계 핫딜 "
+          colorText="로켓직구 글로벌특가"
+          num={7}
+        />
+      </div>
+
+      <div className="relation-product-box">
+        <div className="relation-product-title">이 상품과 관련된 카테고리</div>
+        <div className="link-box">
+          <a href="https://www.coupang.com/np/categories/333113">
+            업라이트피아노
+          </a>
+          <div className="relation-product-link"></div>
+          <a href="https://www.coupang.com/np/categories/333114">
+            그랜드피아노
+          </a>
+        </div>
+      </div>
+
+      <Top />
+    </div>
+  );
+};
+
+export default MainPage;
+
 ```
+- type을 넘겨서 SwiperProduct 컴포넌트 하나로 여러 스타일의 요소들 생성
+
+<br>
+<br>
+
+### AdditionalProduct.jsx
+```jsx
+const AdditionalProduct = (props) => {
+  const { type, scale, item } = props;
+  return (
+    <div>
+      <div className="image-wrap">
+        <img
+          className={`image-box ${
+            scale === "false" || type !== "deleteEl" ? "" : "image-box-scale"
+          }`}
+          src={item.src}
+          alt="상품이미지"
+        />
+      </div>
+
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "badge"
+        }
+      >
+        특가진행중
+      </div>
+      <div
+        className={`product-name ${
+          type === "deleteEl"
+            ? "product-name-blue"
+            : scale === "false"
+            ? "title-botton-line"
+            : ""
+        }`}
+      >
+        {item.title}
+      </div>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "percent-price"
+        }
+      >
+        <div className="wow">와우할인가</div>
+        <div className="origin-price">
+          {item.sale}% <span>{item.orginPrice}</span>
+        </div>
+      </div>
+      <div className="now-price">{item.price}원</div>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "arrive"
+        }
+      >
+        {item.arriveDate} 도착 예정
+      </div>
+      <div
+        className={
+          type === "deleteEl" || type === "deleteEl-dif"
+            ? "deleteElement"
+            : "free-delievery"
+        }
+      >
+        무료배송
+      </div>
+      {item.rate ? (
+        <>
+          <Rate allowHalf defaultValue={item.rateStar} disabled />
+          <span className="rate-text">({item.rate})</span>
+        </>
+      ) : (
+        ""
+      )}
+      <br />
+      <Progress
+        className={
+          type === "deleteEl" || type === "deleteEl-dif" ? "deleteElement" : ""
+        }
+        percent={50}
+        strokeColor="#454f5b"
+        format={() => (
+          <span className="custom-progress-text">{item.percent}% 남음</span>
+        )}
+        style={{ width: 160 }}
+      />
+    </div>
+  );
+};
+
+export default AdditionalProduct;
+
+```
+- SwiperProduct 컴포넌트 안에 존재
+- 상품 하나 자체를 컴포넌트화시켜 type에 따라 들어가는 내용을 변경
 
 <br>
 
 
 ## 📑사용된 라이브러리 및 API
 ### 라이브러리
-
-
-### API
-
+- [Ant Design(antd)](https://ant.design/)
+  - React를 위한 UI 컴포넌트 라이브러리
+- [Swiper](https://swiperjs.com/)
+  - 모바일과 웹에서 모두 사용할 수 있는 터치 기반의 슬라이더/카루셀 라이브러리
 
 
 
