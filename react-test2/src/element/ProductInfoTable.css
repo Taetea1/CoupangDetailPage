@@ -27,6 +27,7 @@
 
 .displayblock {
   width: 100%;
+  cursor: pointer;
   padding: 12px 0;
   border: 1px solid #eee;
   background-color: transparent;

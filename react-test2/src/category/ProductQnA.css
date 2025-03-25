@@ -21,6 +21,7 @@
       font-weight: bolder;
     }
     .qnaBtn {
+      cursor: pointer;
       padding: 6px 20px;
       font-size: 14px;
       color: rgb(52, 106, 255);
@@ -63,4 +64,5 @@
   text-align: center;
   line-height: 25px;
   background-color: #fff;
+  cursor: pointer;
 }

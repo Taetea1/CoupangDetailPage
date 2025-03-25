@@ -43,7 +43,7 @@ const MainPage = () => {
           <SwiperProduct title="다른 고객이 함께 구매한 상품" type="deleteEl" />
         </div>
 
-        {/* 토이게이트의 다른 상품들->**이거 컴포넌트 다시 만들기 */}
+        {/* 토이게이트의 다른 상품들 */}
         <div className="toygate-sale">
           <SwiperProduct
             title="토이게이트의 다른 상품들"

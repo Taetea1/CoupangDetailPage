@@ -8,6 +8,7 @@
     align-items: center;
     .order-text-best {
       color: white;
+      cursor: pointer;
     }
     .order-stick {
       width: 1px;
@@ -17,6 +18,7 @@
     }
     .order-text-recent {
       color: rgb(170, 170, 170);
+      cursor: pointer;
     }
   }
 
