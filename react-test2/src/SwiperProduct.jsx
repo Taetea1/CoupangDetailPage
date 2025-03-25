@@ -53,8 +53,24 @@ const SwiperProduct = (props) => {
         <Swiper
           modules={[Navigation]} // 네비게이션 모듈 추가
           spaceBetween={14}
-          slidesPerView={num === 7 ? 7 : 5}
-          slidesPerGroup={num === 7 ? 7 : 5}
+          breakpoints={{
+            480: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+            645: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+            },
+            900: {
+              slidesPerView: 4,
+              slidesPerGroup: 4,
+            },
+            1024: {
+              slidesPerView: num === 7 ? 7 : 5, // 조건부 적용
+              slidesPerGroup: num === 7 ? 7 : 5,
+            },
+          }}
           onSwiper={setSwiperInstance} // Swiper 인스턴스를 상태로 저장
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }} // ref 연결
         >

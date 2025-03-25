@@ -19,3 +19,7 @@ Button {
     height: 100px;
   }
 }
+
+.rightbox {
+  width: 100%;
+}
