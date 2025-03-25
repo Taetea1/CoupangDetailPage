@@ -68,3 +68,149 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+```
+react-test2
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ favicon.ico
+│  ├─ index.html
+│  ├─ logo192.png
+│  ├─ logo512.png
+│  ├─ manifest.json
+│  └─ robots.txt
+├─ README.md
+└─ src
+   ├─ App.css
+   ├─ App.test.js
+   ├─ category
+   │  ├─ Category.css
+   │  ├─ Category.jsx
+   │  ├─ ProductAnswer.css
+   │  ├─ ProductAnswer.jsx
+   │  ├─ ProductDelievery.css
+   │  ├─ ProductDelievery.jsx
+   │  ├─ ProductDetail.css
+   │  ├─ ProductDetail.jsx
+   │  ├─ ProductQnA.css
+   │  ├─ ProductQnA.jsx
+   │  ├─ ProductRate.css
+   │  └─ ProductRate.jsx
+   ├─ ColorImgList.css
+   ├─ ColorImgList.jsx
+   ├─ CoupangMainImg.css
+   ├─ CoupangMainImg.jsx
+   ├─ CoupangMainInfo.css
+   ├─ CoupangMainInfo.jsx
+   ├─ data
+   │  ├─ confirmData.js
+   │  ├─ product.js
+   │  ├─ ProductDeliveryInfo.js
+   │  ├─ productDetail.js
+   │  ├─ productInfoTable.js
+   │  ├─ QnA.js
+   │  ├─ rateImg.js
+   │  ├─ tagCategory.js
+   │  └─ todayProduct.js
+   ├─ DetailInfo.css
+   ├─ DetailInfo.jsx
+   ├─ element
+   │  ├─ AdditionalProduct.css
+   │  ├─ AdditionalProduct.jsx
+   │  ├─ ConfirmInfo.css
+   │  ├─ ConfirmInfo.jsx
+   │  ├─ CoupangTag.css
+   │  ├─ CoupangTag.jsx
+   │  ├─ DelieveryTable.css
+   │  ├─ DelieveryTable.jsx
+   │  ├─ ImgElement.css
+   │  ├─ ImgElement.jsx
+   │  ├─ ProductDelieveryTable.css
+   │  ├─ ProductDeliveryTable.jsx
+   │  ├─ ProductInfoMark.css
+   │  ├─ ProductInfoMark.jsx
+   │  ├─ ProductInfoRow.jsx
+   │  ├─ ProductInfoTable.css
+   │  ├─ ProductInfoTables.jsx
+   │  ├─ Review.css
+   │  ├─ Review.jsx
+   │  ├─ SearchRate.css
+   │  └─ SearchRate.jsx
+   ├─ img
+   │  ├─ bankbook.png
+   │  ├─ blackOne.jpg
+   │  ├─ blackTwo.jpg
+   │  ├─ brandLogo.png
+   │  ├─ calender.png
+   │  ├─ card.png
+   │  ├─ check.png
+   │  ├─ COMM-equipment.jpg
+   │  ├─ coupaymoney.png
+   │  ├─ delievery.png
+   │  ├─ detailInfo1.jpg
+   │  ├─ detailInfo2.jpg
+   │  ├─ detailInfo3.jpg
+   │  ├─ detailInfo4.jpg
+   │  ├─ detailInfo5.jpg
+   │  ├─ detailInfo6.jpg
+   │  ├─ icon-reply.png
+   │  ├─ imageasset.png
+   │  ├─ img-profile-empty.png
+   │  ├─ KC-black.jpg
+   │  ├─ pinkFive.png
+   │  ├─ pinkFour.png
+   │  ├─ pinkOne.jpg
+   │  ├─ pinkThree.png
+   │  ├─ pinkTwo.png
+   │  ├─ product1.jpg
+   │  ├─ product10.jpg
+   │  ├─ product11.jpeg
+   │  ├─ product12.jpg
+   │  ├─ product13.jpg
+   │  ├─ product14.jpg
+   │  ├─ product15.jpg
+   │  ├─ product2.jpg
+   │  ├─ product3.jpg
+   │  ├─ product4.jpg
+   │  ├─ product5.jpeg
+   │  ├─ product6.jpg
+   │  ├─ product7.jpg
+   │  ├─ product8.jpg
+   │  ├─ product9.jpg
+   │  ├─ rateImg1.jpg
+   │  ├─ rateImg2.png
+   │  ├─ rateImg3.jpg
+   │  ├─ rateImg4.jpg
+   │  ├─ rateImg5.jpg
+   │  ├─ rateImg6.jpg
+   │  ├─ rateImg7.jpg
+   │  ├─ rateImg8.jpg
+   │  ├─ silverFive.png
+   │  ├─ silverFour.png
+   │  ├─ silverOne.png
+   │  ├─ silverSeven.png
+   │  ├─ silverSix.png
+   │  ├─ silverThree.png
+   │  ├─ silverTwo.png
+   │  ├─ swiper-navi.png
+   │  └─ VINE_v1.png
+   ├─ index.css
+   ├─ index.js
+   ├─ logo.svg
+   ├─ MainImg.css
+   ├─ MainImg.jsx
+   ├─ MainPage.js
+   ├─ MainTop.jsx
+   ├─ ProductName.css
+   ├─ ProductName.jsx
+   ├─ ProductPrice.css
+   ├─ ProductPrice.jsx
+   ├─ reportWebVitals.js
+   ├─ setupTests.js
+   ├─ SubImgList.css
+   ├─ SubImgList.jsx
+   ├─ SwiperProduct.css
+   └─ SwiperProduct.jsx
+
+```

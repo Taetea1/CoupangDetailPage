@@ -3,6 +3,7 @@ import MainTop from "./MainTop";
 import SwiperProduct from "./SwiperProduct";
 import Category from "./category/Category";
 import CoupangTag from "./element/CoupangTag";
+import Top from "./Top";
 import { tagCategory } from "./data/tagCategory";
 
 const MainPage = () => {
@@ -80,6 +81,8 @@ const MainPage = () => {
           </a>
         </div>
       </div>
+
+      <Top />
     </div>
   );
 };
