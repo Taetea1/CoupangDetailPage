@@ -67,7 +67,11 @@
   - 위에는 hover시 navigation나타나기 및 파란글자, 이미지 hover시 scale
   - 아래는 hover시 글자에 underline, 스와이퍼 없애고 필요한 부분만 삽입
   
-  4-3)![Image](https://github.com/user-attachments/assets/05ed03be-dbfe-4c87-b9d0-653ff2bdeaf0)
+  4-3)<br>
+  ![Image](https://github.com/user-attachments/assets/05ed03be-dbfe-4c87-b9d0-653ff2bdeaf0)
+  - 같은 컴포넌트로 다른 스타일 적용
+
+
   
 <br>
 
@@ -302,6 +306,112 @@ export default AdditionalProduct;
 
 <br>
 
+
+### ProductInfoMark.jsx
+```jsx
+const ProductInfoMark = (props) => {
+  const { subtitle, content } = props;
+
+  return (
+    <>
+      <div className="table-element-box">
+        {subtitle ? (
+          <>
+            <div className="subtitles">{subtitle}</div>
+            <div className="content">{content}</div>
+          </>
+        ) : (
+          <>
+            <div className="content"></div>
+          </>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default ProductInfoMark;
+```
+- 하나의 컴포넌트로 여러 모양의 테이블 생성
+
+<br>
+
+### ImgElement.jsx
+```jsx
+const ImgElement = (props) => {
+  const { item, type } = props;
+  return (
+    <div className="img-container">
+      {type === "video" ? (
+        <div className="overlay-container">
+          <div className="blackImg"></div>
+          <CaretRightOutlined className="custom-playicon" />
+          <div className="video-time">0:14</div>
+        </div>
+      ) : type === "finary" ? (
+        <div className="overlay-container">
+          <div className="blackImg"></div>
+          <div className="finary-number">409</div>
+          <div className="finary-add">더보기{">"}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+
+      <img className="img-element-img" src={item} alt="상품이미지" />
+    </div>
+  );
+};
+
+export default ImgElement;
+```
+- 하나의 이미지 컴포넌트로 여러 모양의 이미지 생성
+
+
+<br>
+
+### ConfirmInfo.jsx
+```jsx
+const ConfirmInfo = (props) => {
+  const { item } = props;
+
+  return (
+    <>
+      <div className="confirm-box">
+        <div className="confirm-img">
+          <img src={item.src} alt="인증" />
+        </div>
+        <div className="confirm-info-wrap">
+          <div className="confirm-title-box">
+            <div>{item.title}</div>
+            <a href={item.href}>{item.bluetext}</a>
+          </div>
+          <div className="confirm-content">{item.content}</div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ConfirmInfo;
+
+```
+- 하나의 인증정보 컴포넌트에 다른 데이터 삽입
+
+<br>
+
+## ⭐사용된 Hook
+|컴포넌트|useState|useEffect|
+|------|:---:|:---:|
+|Top|O(Top버튼 상태관리)|O|
+|SwiperProduct|O(각 네비게이션 상태관리)|O|
+|ProductPrice|O(가격 및 개수 상태관리)|O|
+|MainTop|O(이미지들 및 상품 번호, 호버된 이미지의 인덱스 상태관리)|X|
+|ColorImgList|O(클릭된 색상 상태관리)|X|
+|ProductInfoTable|O(필수 표기정보 더보기 상태관리)|X|
+|ProductDetail|O(상품정보 접기/더보기 상태관리)|X|
+
+<br>
 
 ## 📑사용된 라이브러리 및 API
 ### 라이브러리
